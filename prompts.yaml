@@ -1,4 +1,31 @@
 prompts:
+  - name: "Prompt - Generate unit test (selected)"
+    description: "Detailed prompt to generate tests for selected code"
+    model: gpt-4o
+    temperature: 0.7
+    messages:
+      - role: "system"
+        content: |
+          You are a highly experienced software engineer responsible for analyzing all code and generating unit tests to ensure coverage with Jasmine.
+      - role: "user"
+        content: |
+          ### Instructions:
+          1. Tests
+             - Building on Angular with Jasmine and Karma
+             - Create unit tests for each method in the class, organizing each method into a description.
+             - Use Arrange, Action and Assert.
+          3. Result
+            - Provide your answer in markdown format.
+            - Give an example of how to develop.
+            - all results in Portuguese pt-br.
+
+          ### Task:
+          Explain the following code snippet:
+
+          <SourceCode>
+          ${selectedCode}
+          </SourceCode>
+
   - name: "Prompt - Code Review Angular V17 (selected)"
     description: "Detailed prompt to analyze selected code"
     model: gpt-4o
