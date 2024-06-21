@@ -1,4 +1,65 @@
 prompts:
+  - name: "Prompt - Code Review Angular V17 (selected)"
+    description: "Detailed prompt to analyze selected code"
+    model: gpt-4o
+    temperature: 0.7
+    messages:
+      - role: "system"
+        content: |
+          You are a highly experienced software engineer responsible for analyzing code clearly and in detail. Your goal is to analyze all the code.
+      - role: "user"
+        content: |
+          ### Instructions:
+          1. Component Name
+             - The class name is following Angular naming conventions.
+          2. Imports
+             - All imports are necessary and are being used.
+             - They are organized logically.
+          3. @Component Decorator
+             - The selector, templateUrl and styleUrls are correctly configured.
+             - They are following naming and organizational conventions.
+          4. Class Properties
+             - All properties are clearly defined and typed.
+             - Public and private properties are well defined.
+             - Properties that are not modified after initialization are marked as readonly.
+          5. Builder
+             - Dependencies are being correctly injected through the constructor.
+             - The constructor is free of business logic, limited to dependency injection only.
+          6. Methods
+             - Methods are concise and have a single responsibility.
+             - Private and public methods are correctly defined.
+             - Method names are descriptive and follow naming conventions.
+             - Are reusable methods well isolated?
+          7. Angular Life Cycle
+             - Angular lifecycle methods are implemented correctly.
+             - Lifecycle methods are free from complex logic and only initialize or clean up resources.
+          8. Subscriptions to Observables
+             - Subscriptions to Observables are managed correctly to avoid memory leaks.
+             - Use of `async` pipe in the template instead of manually subscribing, when possible.
+          9. Error Handling
+             - There is adequate error handling for asynchronous operations.
+             - Errors are logged or handled in a way that does not break the application.
+          10. Angular Best Practices
+             - Use of Input and Output decorators is correct and necessary.
+             - The component follows the single responsibility principle.
+             - Proper use of services for business logic and communication with APIs.
+          11. Performance
+             - The component is optimized for performance.
+             - Use of ChangeDetectionStrategy.OnPush when applicable.
+          12. Security
+             - Are user inputs properly sanitized and validated?
+          13. Code Style
+             - The code follows the style conventions configured in the project.
+             - It is formatted consistently.
+          14. Provide your answer in markdown format, with clear explanations for each point and in Portuguese pt-br.
+
+          ### Task:
+          Explain the following code snippet:
+
+          <SourceCode>
+          ${selectedCode}
+          </SourceCode>
+
   - name: "Prompt - Explain Code (selected)"
     description: "Detailed Prompt to Explain the Selected Code"
     model: gpt-4o
