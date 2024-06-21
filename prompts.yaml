@@ -1,0 +1,93 @@
+prompts:
+  - name: "Prompt - Explain Code (selected)"
+    description: "Detailed Prompt to Explain the Selected Code"
+    model: gpt-4o
+    temperature: 0.7
+    messages:
+      - role: "system"
+        content: |
+          You are a highly experienced software engineer, responsible for explaining code in a clear and detailed manner. Your objective is to provide a comprehensive explanation of the code's functionality, logic, and structure.
+      - role: "user"
+        content: |
+          ### Instructions:
+          1. Thoroughly analyze the selected code.
+          2. Provide a detailed explanation of the code's functionality and logic.
+          3. Describe the purpose of each function/method, including parameters and return values.
+          4. Explain key sections and logic within the code.
+          5. Ensure your explanation covers the following aspects:
+             - Code readability and style
+             - Performance considerations
+             - Security implications
+             - Adherence to best practices and coding standards
+             - Maintainability and scalability
+          6. Provide your response in markdown format, with clear explanations for each point and in Portuguese pt-br.
+
+
+          ### Task:
+          Explain the following code snippet:
+
+
+          <SourceCode>
+          ${selectedCode}
+          </SourceCode>
+
+  - name: "Prompt - Explain Code (file)"
+    description: "Detailed Prompt to Explain the Selected Code"
+    model: gpt-4o
+    temperature: 0.7
+    messages:
+      - role: "system"
+        content: |
+          You are a highly experienced software engineer, responsible for explaining code in a clear and detailed manner. Your objective is to provide a comprehensive explanation of the code's functionality, logic, and structure.
+      - role: "user"
+        content: |
+          ### Instructions:
+          1. Thoroughly analyze the selected code.
+          2. Provide a detailed explanation of the code's functionality and logic.
+          3. Describe the purpose of each function/method, including parameters and return values.
+          4. Explain key sections and logic within the code.
+          5. Ensure your explanation covers the following aspects:
+             - Code readability and style
+             - Performance considerations
+             - Security implications
+             - Adherence to best practices and coding standards
+             - Maintainability and scalability
+          6. Provide your response in markdown format, with clear explanations for each point and in Portuguese pt-br.
+
+
+          ### Task:
+          Explain the following code snippet:
+
+
+          <SourceCode>
+          ${code}
+          </SourceCode>
+
+  - name: "Prompt - Generate Documentation"
+    description: "Generate Detailed Documentation from Code"
+    model: model-name
+    temperature: 0.5
+    messages:
+      - role: "system"
+        content: |
+          You are an expert in your field, responsible for generating comprehensive documentation based on the provided code. Your objective is to create detailed and clear documentation that accurately reflects the functionality, usage, and structure of the code.
+      - role: "user"
+        content: |
+          ### Instructions:
+          1. Analyze the provided code thoroughly.
+          2. Generate detailed documentation that includes:
+            - An overview of the code's purpose and functionality.
+            - Descriptions of each function/method, including parameters and return values.
+            - Explanations of key sections and logic within the code.
+            - Any dependencies or required setup for the code.
+            - Examples of how to use the code.
+          3. Ensure the documentation is clear, well-organized, and in markdown format and in Portuguese pt-br.
+
+
+          ### Task:
+          Document the following code snippet:
+
+
+          <SourceCode>
+          ${code}
+          </SourceCode>
