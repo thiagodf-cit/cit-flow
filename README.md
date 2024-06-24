@@ -27,7 +27,7 @@ prompts:
   model: gpt-4o
   temperature: 0.7
   messages:
-ß  - role: "system"
+  - role: "system"
     content: |
       You are a highly experienced software engineer, responsible for explaining code in a clear and detailed manner. Your objective is to provide a comprehensive explanation of the code's functionality, logic, and structure.
   - role: "user"
