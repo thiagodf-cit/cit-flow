@@ -103,7 +103,7 @@ prompts:
 "cit-code-flow-generator.flowLoginUrl": "<https://flow.ciandt.com/>",
 "cit-code-flow-generator.flowAgent": "simple_agent",
 "cit-code-flow-generator.flowTenant": "",
-"cit-code-flow-generator.pathToYAMLWithPrompts": "",
+"cit-code-flow-generator.pathToYamlWithPrompts": "",
 "cit-code-flow-generator.pathToGeneratedFiles": "/tmp",
 "cit-code-flow-generator.pathToChrome": "google-chrome",
 ```
