@@ -51,7 +51,7 @@ prompts:
 
 
       <SourceCode>
-      ${selectedCode}
+      {{selectedText}}
       </SourceCode>
 
 
@@ -84,7 +84,7 @@ prompts:
 
 
       <SourceCode>
-      ${code}
+      {{code}}
       </SourceCode>
 ```
 
@@ -98,14 +98,7 @@ prompts:
 9. Adicione os itens abaixo.
 
 ```sh
-"cit-code-flow-generator.flowToken": "",
-"cit-code-flow-generator.flowLlmUrl": "<https://flow.ciandt.com/ai-orchestration-api/v1/openai>",
-"cit-code-flow-generator.flowLoginUrl": "<https://flow.ciandt.com/>",
-"cit-code-flow-generator.flowAgent": "simple_agent",
-"cit-code-flow-generator.flowTenant": "",
 "cit-code-flow-generator.pathToYamlWithPrompts": "",
-"cit-code-flow-generator.pathToGeneratedFiles": "/tmp",
-"cit-code-flow-generator.pathToChrome": "google-chrome",
 ```
 
 10. Em `cit-code-flow-generator.pathToYAMLWithPrompt` coloque o caminho até o seu prompts.yaml.
@@ -118,6 +111,10 @@ prompts:
 
 13. Feito o login você já pode usar a extensão.
 
-## Doc Oficial
+<br />
+<br />
+<br />
+
+## Doc Oficial - Atualizado pelo time
 
 - [Doc](https://docs.google.com/document/d/1BAUAbDTS5UBEHNe5a2RLDo628u6FAy5BR-r5I-0457E/edit#heading=h.4psw5ymq8a90)
