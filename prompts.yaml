@@ -23,7 +23,7 @@ prompts:
           Explain the following code snippet:
 
           <SourceCode>
-          ${selectedCode}
+          {{selectedText}}
           </SourceCode>
 
   - name: "Prompt - Code Review Angular V17 (selected)"
@@ -38,144 +38,51 @@ prompts:
         content: |
           ### Instructions:
           1. Component Name
-             - The class name is following Angular naming conventions.
+            - The class name is following Angular naming conventions.
           2. Imports
-             - All imports are necessary and are being used.
-             - They are organized logically.
+            - All imports are necessary and are being used.
+            - They are organized logically.
           3. @Component Decorator
-             - The selector, templateUrl and styleUrls are correctly configured.
-             - They are following naming and organizational conventions.
+            - The selector, templateUrl and styleUrls are correctly configured.
+            - They are following naming and organizational conventions.
           4. Class Properties
-             - All properties are clearly defined and typed.
-             - Public and private properties are well defined.
-             - Properties that are not modified after initialization are marked as readonly.
+            - All properties are clearly defined and typed.
+            - Public and private properties are well defined.
+            - Properties that are not modified after initialization are marked as readonly.
           5. Builder
-             - Dependencies are being correctly injected through the constructor.
-             - The constructor is free of business logic, limited to dependency injection only.
+            - Dependencies are being correctly injected through the constructor.
+            - The constructor is free of business logic, limited to dependency injection only.
           6. Methods
-             - Methods are concise and have a single responsibility.
-             - Private and public methods are correctly defined.
-             - Method names are descriptive and follow naming conventions.
-             - Are reusable methods well isolated?
+            - Methods are concise and have a single responsibility.
+            - Private and public methods are correctly defined.
+            - Method names are descriptive and follow naming conventions.
+            - Are reusable methods well isolated?
           7. Angular Life Cycle
-             - Angular lifecycle methods are implemented correctly.
-             - Lifecycle methods are free from complex logic and only initialize or clean up resources.
+            - Angular lifecycle methods are implemented correctly.
+            - Lifecycle methods are free from complex logic and only initialize or clean up resources.
           8. Subscriptions to Observables
-             - Subscriptions to Observables are managed correctly to avoid memory leaks.
-             - Use of `async` pipe in the template instead of manually subscribing, when possible.
+            - Subscriptions to Observables are managed correctly to avoid memory leaks.
+            - Use of `async` pipe in the template instead of manually subscribing, when possible.
           9. Error Handling
-             - There is adequate error handling for asynchronous operations.
-             - Errors are logged or handled in a way that does not break the application.
+            - There is adequate error handling for asynchronous operations.
+            - Errors are logged or handled in a way that does not break the application.
           10. Angular Best Practices
-             - Use of Input and Output decorators is correct and necessary.
-             - The component follows the single responsibility principle.
-             - Proper use of services for business logic and communication with APIs.
+            - Use of Input and Output decorators is correct and necessary.
+            - The component follows the single responsibility principle.
+            - Proper use of services for business logic and communication with APIs.
           11. Performance
-             - The component is optimized for performance.
-             - Use of ChangeDetectionStrategy.OnPush when applicable.
+            - The component is optimized for performance.
+            - Use of ChangeDetectionStrategy.OnPush when applicable.
           12. Security
-             - Are user inputs properly sanitized and validated?
+            - Are user inputs properly sanitized and validated?
           13. Code Style
-             - The code follows the style conventions configured in the project.
-             - It is formatted consistently.
+            - The code follows the style conventions configured in the project.
+            - It is formatted consistently.
           14. Provide your answer in markdown format, with clear explanations for each point and in Portuguese pt-br.
 
           ### Task:
           Explain the following code snippet:
 
           <SourceCode>
-          ${selectedCode}
-          </SourceCode>
-
-  - name: "Prompt - Explain Code (selected)"
-    description: "Detailed Prompt to Explain the Selected Code"
-    model: gpt-4o
-    temperature: 0.7
-    messages:
-      - role: "system"
-        content: |
-          You are a highly experienced software engineer, responsible for explaining code in a clear and detailed manner. Your objective is to provide a comprehensive explanation of the code's functionality, logic, and structure.
-      - role: "user"
-        content: |
-          ### Instructions:
-          1. Thoroughly analyze the selected code.
-          2. Provide a detailed explanation of the code's functionality and logic.
-          3. Describe the purpose of each function/method, including parameters and return values.
-          4. Explain key sections and logic within the code.
-          5. Ensure your explanation covers the following aspects:
-             - Code readability and style
-             - Performance considerations
-             - Security implications
-             - Adherence to best practices and coding standards
-             - Maintainability and scalability
-          6. Provide your response in markdown format, with clear explanations for each point and in Portuguese pt-br.
-
-
-          ### Task:
-          Explain the following code snippet:
-
-
-          <SourceCode>
-          ${selectedCode}
-          </SourceCode>
-
-  - name: "Prompt - Explain Code (file)"
-    description: "Detailed Prompt to Explain the Selected Code"
-    model: gpt-4o
-    temperature: 0.7
-    messages:
-      - role: "system"
-        content: |
-          You are a highly experienced software engineer, responsible for explaining code in a clear and detailed manner. Your objective is to provide a comprehensive explanation of the code's functionality, logic, and structure.
-      - role: "user"
-        content: |
-          ### Instructions:
-          1. Thoroughly analyze the selected code.
-          2. Provide a detailed explanation of the code's functionality and logic.
-          3. Describe the purpose of each function/method, including parameters and return values.
-          4. Explain key sections and logic within the code.
-          5. Ensure your explanation covers the following aspects:
-             - Code readability and style
-             - Performance considerations
-             - Security implications
-             - Adherence to best practices and coding standards
-             - Maintainability and scalability
-          6. Provide your response in markdown format, with clear explanations for each point and in Portuguese pt-br.
-
-
-          ### Task:
-          Explain the following code snippet:
-
-
-          <SourceCode>
-          ${code}
-          </SourceCode>
-
-  - name: "Prompt - Generate Documentation"
-    description: "Generate Detailed Documentation from Code"
-    model: model-name
-    temperature: 0.5
-    messages:
-      - role: "system"
-        content: |
-          You are an expert in your field, responsible for generating comprehensive documentation based on the provided code. Your objective is to create detailed and clear documentation that accurately reflects the functionality, usage, and structure of the code.
-      - role: "user"
-        content: |
-          ### Instructions:
-          1. Analyze the provided code thoroughly.
-          2. Generate detailed documentation that includes:
-            - An overview of the code's purpose and functionality.
-            - Descriptions of each function/method, including parameters and return values.
-            - Explanations of key sections and logic within the code.
-            - Any dependencies or required setup for the code.
-            - Examples of how to use the code.
-          3. Ensure the documentation is clear, well-organized, and in markdown format and in Portuguese pt-br.
-
-
-          ### Task:
-          Document the following code snippet:
-
-
-          <SourceCode>
-          ${code}
+          {{selectedText}}
           </SourceCode>
