@@ -13,7 +13,7 @@ prompts:
           1. Tests
             - Building on Angular with Jasmine and Karma
             - Create unit tests for each method in the class, organizing each method into a description.
-            - Use Arrange, Action and Assert.
+            - Use Arrange, Act and Assert.
           3. Result
             - Provide your answer in markdown format.
             - Give an example of how to develop.
@@ -23,7 +23,7 @@ prompts:
           Explain the following code snippet:
 
           <SourceCode>
-          {{selectedText}}
+          {{selectedCode}}
           </SourceCode>
 
   - name: "Prompt - Code Review Angular V17 (selected)"
@@ -84,5 +84,5 @@ prompts:
           Explain the following code snippet:
 
           <SourceCode>
-          {{selectedText}}
+          {{selectedCode}}
           </SourceCode>
