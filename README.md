@@ -14,7 +14,7 @@
     <img src="prints/print-marketplace-find-ext.png" alt="">
 
 4. Baixe e instale.
-5. Na sua pasta pessoal crie o arquivo prompts.yaml `/home/< user >/dev/flow/prompts.yaml`
+5. Na sua pasta pessoal crie o arquivo prompts.yaml `/home/user/dev/flow/prompts.yaml`
 
     <img src="prints/print-folder-person.png" alt="">
 
@@ -103,7 +103,7 @@ prompts:
 
 10. Em `cit-code-flow-generator.pathToYAMLWithPrompt` coloque o caminho até o seu prompts.yaml.
 
-11. Ex: `/home/< you_user >/dev/flow/prompts.yaml`.
+11. Ex: `/home/user/dev/flow/prompts.yaml`.
 
 12. Agora abra a aba do `CI&T/FLOW` e clique em `CI&T/FLOW - Login`.
 
@@ -114,7 +114,3 @@ prompts:
 <br />
 <br />
 <br />
-
-## Doc Oficial - Atualizado pelo time
-
-- [Doc](https://docs.google.com/document/d/1BAUAbDTS5UBEHNe5a2RLDo628u6FAy5BR-r5I-0457E/edit#heading=h.4psw5ymq8a90)

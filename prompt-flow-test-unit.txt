@@ -1,92 +1,19 @@
-Eu como desenvolvedor front-end.
-Preciso implementar testes de unidade com Jasmine com a necesidade de manter a cobertura de código em 100%. 
-Implementando com Angular e o Angular Material.
-Me o exemplo de como eu deveria implementar todos os testes segindo esses objetivos. 
+Eu como desenvolvedor front-end, preciso implementar testes de unidade usando o Jasmine.
+
+Preciso de um exemplo de como eu deveria implementar todos os testes segindo esses objetivos.
 Preciso que:
 - Cada método sejá um atribuido um 'describe'  dentro do 'describe' principal.
 - Descreva o 'describe' com  'Teste do NomeDoMetodo'
-- Cada 'it' com o seu  // Arrange,  // Act e // Assert .  
+- Cada 'it' com o seu  // Arrange,  // Act e // Assert .
 - Descreva o 'it' iniciando com o 'Deve '
 - Descreva sempre em portugues pt-br
 - Manter os testes pequenos e focados em uma única responsabilidade.
-- Use o clean code e boas praticas com typescript. 
+- Use o clean code e boas praticas com typescript.
 
 Esse é o Código:
 
 
 ```typescript
 
-setDataSendAssignForm(): void {
-    if (this.assignProposal) {
-      this.assignForm
-        .get('contactType')
-        .setValue(
-          this.assignProposal.signer.phone
-            ? SignerContactTypeEnum.WHATSAPP
-            : SignerContactTypeEnum.EMAIL
-        );
-
-      this.assignForm
-        .get('senderEmail')
-        .setValue(this.assignProposal.senderEmail);
-      this.assignForm
-        .get('signerName')
-        .setValue(this.assignProposal.signer.name);
-      this.assignForm
-        .get('signerEmail')
-        .setValue(this.assignProposal.signer.email ?? '');
-      this.assignForm
-        .get('signerPhone')
-        .setValue(this.assignProposal.signer.phone ?? '');
-    }
-  }
-
-  formatDataAssign(): SendProposalRequestModel {
-    const contactType = this.assignForm.get('contactType').value;
-
-    const signerEmail =
-      contactType === SignerContactTypeEnum.EMAIL
-        ? this.assignForm.get('signerEmail').value
-        : undefined;
-
-    const signerPhone =
-      contactType === SignerContactTypeEnum.WHATSAPP
-        ? this.assignForm.get('signerPhone').value
-        : undefined;
-
-    return {
-      leadId: this.itemLead.id,
-      senderEmail: this.assignForm.get('senderEmail').value,
-      user: this.authService.getName(),
-      signer: {
-        name: this.assignForm.get('signerName').value,
-        email: signerEmail,
-        phone: signerPhone,
-      },
-    };
-  }
-
-  postDataSendAssign(): void {
-    if (this.sendingProposal) {
-      return;
-    }
-    this.errorMessage.emit(false);
-
-    const assignData = this.formatDataAssign();
-    this.sendingProposal = true;
-
-    this.sendProposalService.execute(assignData).subscribe({
-      next: () => {
-        this.successMessage.emit('Proposta enviada com sucesso.');
-        this.sendingProposal = false;
-        this.toggle();
-      },
-      error: () => {
-        this.errorMessage.emit(true);
-        this.sendingProposal = false;
-        this.toggle();
-      },
-    });
-  }
 
 ```
