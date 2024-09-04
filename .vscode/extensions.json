@@ -1,5 +1,6 @@
 {
-    "recommendations": [
-        "citflow.cit-code-flow-generator"
-    ]
+  "recommendations": [
+    "citflow.cit-code-flow-generator",
+    "cit-flow-coder-assistant.cit-flow-coder-assistant"
+  ]
 }

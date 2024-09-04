@@ -3,22 +3,21 @@
 <br>
 <br>
 
-## Instalação
+## Instalação - CodeFlow AI Generator
 
-1. Abra seu Vscode
+- No Vscode na aba de extensões pesquise por: `cit-code-flow-generator` ou use as extensões recomendadas deste workspace.
 
-2. Va na aba extensões
+<img src="prints/print-marketplace-find-ext.png" alt="">
 
-3. Pesquise por: cit-code-flow-generator
+<br>
 
-    <img src="prints/print-marketplace-find-ext.png" alt="">
+### Configuração
 
-4. Baixe e instale.
-5. Na sua pasta pessoal crie o arquivo prompts.yaml `/home/user/dev/flow/prompts.yaml`
+- Na sua pasta pessoal crie o arquivo prompts.yaml ex: `/home/user/dev/flow/prompts.yaml`
 
-    <img src="prints/print-folder-person.png" alt="">
+  <img src="prints/print-folder-person.png" alt="">
 
-6. Adicione o prompt default ou o `prompts.yaml` atual.
+- Adicione o prompt default no `prompts.yaml`.
 
 ```sh
 prompts:
@@ -88,28 +87,28 @@ prompts:
       </SourceCode>
 ```
 
-7. Salve e feche o prompts.yam.
-8. Use as Teclas `CTRL+P`.
-9. Digite >`settings.json`.
-8. Clique no primeiro e abra o json.
+- Use as Teclas `CTRL+P`.
+- Digite >`settings.json`.
+- Clique no primeiro e abra o json.
 
-    <img src="prints/print-open-settings-user.png" alt="">
+<img src="prints/print-open-settings-user.png" alt="">
 
-9. Adicione os itens abaixo.
+<br>
+<br> 
+
+- Adicione os itens abaixo.
 
 ```sh
 "cit-code-flow-generator.pathToYamlWithPrompts": "",
 ```
 
-10. Em `cit-code-flow-generator.pathToYAMLWithPrompt` coloque o caminho até o seu prompts.yaml.
+- Em `cit-code-flow-generator.pathToYAMLWithPrompt` coloque o caminho até o seu prompts.yaml. Ex: `/home/user/dev/flow/prompts.yaml`.
 
-11. Ex: `/home/user/dev/flow/prompts.yaml`.
-
-12. Agora abra a aba do `CI&T/FLOW` e clique em `CI&T/FLOW - Login`.
+- Agora abra a aba do `CI&T/FLOW` e clique em `CI&T/FLOW - Login`.
 
     <img src="prints/print-extension-cit-flow.png" alt="">
 
-13. Feito o login você já pode usar a extensão.
+- Feito o login você já pode usar a extensão.
 
 <br />
 <br />

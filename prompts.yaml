@@ -1,26 +1,31 @@
 prompts:
-  - name: "Prompt - Generate unit test me (selected)"
+  - name: "Prompt - Generate unit test for me (selected)"
     description: "Detailed prompt to generate tests for selected code"
     model: gpt-4o
     temperature: 0.7
     messages:
       - role: "system"
         content: |
-          You are a highly experienced software engineer responsible for analyzing all code and generating unit tests to ensure coverage with Jasmine.
+          Hello, Flow! I am a front-end developer, and I am implementing unit tests using Jasmine in an Angular application that uses Angular Material.
       - role: "user"
         content: |
-          ### Instructions:
-          1. Tests
-            - Building on Angular with Jasmine and Karma
-            - Create unit tests for each method in the class, organizing each method into a description.
-            - Use Arrange, Act and Assert.
-          3. Result
-            - Provide your answer in markdown format.
-            - Give an example of how to develop.
-            - all results in Portuguese pt-br.
+          I need help analyzing the following code and creating unit tests according to the objectives below:
 
-          ### Task:
-          Explain the following code snippet:
+          1. **Test Structure:**
+            - Each method should be assigned to a `describe` block within the main `describe`.
+            - The `describe` should be named "Test for MethodName".
+            - Each `it` should follow the structure `// Arrange`, `// Act`, and `// Assert`.
+            - The `it` should start with "Should".
+            - Descriptions should be in Portuguese (pt-br).
+
+          2. **Best Practices:**
+            - Keep tests small and focused on a single responsibility.
+            - Use clean code and good practices with TypeScript.
+
+          3. **Code Improvements:**
+            - If you identify any code improvements, please provide an example.
+
+          **Here is the code I would like to test:**
 
           <SourceCode>
           {{selectedCode}}
@@ -40,8 +45,6 @@ prompts:
           1. Tests
             - Building on Angular with Jasmine and Karma
             - Create unit tests for each method in the class, organizing each method into a description.
-          3. Result
-            - Provide your answer in markdown format.
 
           ### Task:
           Explain the following code snippet:
