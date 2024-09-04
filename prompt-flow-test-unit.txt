@@ -1,14 +1,16 @@
 Eu como desenvolvedor front-end, preciso implementar testes de unidade usando o Jasmine.
 
-Preciso de um exemplo de como eu deveria implementar todos os testes segindo esses objetivos.
+Gostaria de uma analise em minha aplicacão angular, estou usando o angular material, preciso implementar testes de unidade seguindo esses objetios.
+
 Preciso que:
-- Cada método sejá um atribuido um 'describe'  dentro do 'describe' principal.
-- Descreva o 'describe' com  'Teste do NomeDoMetodo'
-- Cada 'it' com o seu  // Arrange,  // Act e // Assert .
-- Descreva o 'it' iniciando com o 'Deve '
-- Descreva sempre em portugues pt-br
-- Manter os testes pequenos e focados em uma única responsabilidade.
-- Use o clean code e boas praticas com typescript.
+	- Cada método sejá um atribuido um 'describe'  dentro do 'describe' principal.
+	- Descreva o 'describe' com  'Teste do NomeDoMetodo'
+	- Cada 'it' com o seu  // Arrange,  // Act e // Assert .
+	- Descreva o 'it' iniciando com o 'Deve '
+	- Descreva sempre em portugues pt-br
+	- Manter os testes pequenos e focados em uma única responsabilidade.
+	- Use o clean code e boas praticas com typescript.
+	- Caso necessite alguma melhoria de código cite um exemplo.
 
 Esse é o Código:
 
