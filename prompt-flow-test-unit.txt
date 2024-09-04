@@ -1,19 +1,21 @@
-Olá, Flow! Eu sou um desenvolvedor front-end e estou implementando testes de unidade usando o Jasmine em uma aplicação Angular que utiliza Angular Material. Preciso de ajuda para analisar o seguinte código e criar testes de unidade seguindo os objetivos abaixo:
+Hello, Flow! I am a front-end developer, and I am implementing unit tests using Jasmine in an Angular application that uses Angular Material. I need help analyzing the following code and creating unit tests according to the objectives below:
 
-1. **Estrutura dos Testes:**
-   - Cada método deve ser atribuído a um `describe` dentro do `describe` principal.
-   - O `describe` deve ser nomeado como "Teste do NomeDoMetodo".
-   - Cada `it` deve seguir a estrutura `// Arrange`, `// Act` e `// Assert`.
-   - O `it` deve ser descrito começando com "Deve".
-   - As descrições devem estar em português (pt-br).
+1. **Test Structure:**
+   - Each method should be assigned to a `describe` block within the main `describe`.
+   - The `describe` should be named "Test for MethodName".
+   - Each `it` should follow the structure `// Arrange`, `// Act`, and `// Assert`.
+   - The `it` should start with "Should".
+   - Descriptions should be in Portuguese (pt-br).
 
-2. **Boas Práticas:**
-   - Manter os testes pequenos e focados em uma única responsabilidade.
-   - Usar clean code e boas práticas com TypeScript.
+2. **Best Practices:**
+   - Keep tests small and focused on a single responsibility.
+   - Use clean code and good practices with TypeScript.
 
-3. **Melhorias de Código:**
-   - Caso você identifique alguma melhoria no código, por favor, forneça um exemplo.
+3. **Code Improvements:**
+   - If you identify any code improvements, please provide an example.
 
-**Aqui está o código que eu gostaria de testar:**
+**Here is the code I would like to test:**
 
 ```typescript
+
+```
